@@ -28,21 +28,24 @@
                 <Slider x:Name="RedSlider"
                         ThumbColor="{StaticResource PrimaryColor}"
                         MaximumTrackColor="{StaticResource TertiaryColor}"
-                        MinimumTrackColor="{StaticResource SecondaryColor}" />
+                        MinimumTrackColor="{StaticResource SecondaryColor}"
+                        ValueChanged="ColorValueChangedS"/>
 
                 <Label Text="Green value " />
 
                 <Slider x:Name="GreenSlider"
                         ThumbColor="{StaticResource PrimaryColor}"
                         MaximumTrackColor="{StaticResource TertiaryColor}"
-                        MinimumTrackColor="{StaticResource SecondaryColor}" />
+                        MinimumTrackColor="{StaticResource SecondaryColor}"
+                        ValueChanged="ColorValueChangedS"/>
 
                 <Label Text="Blue value " />
 
                 <Slider x:Name="BlueSlider"
                         ThumbColor="{StaticResource PrimaryColor}"
                         MaximumTrackColor="{StaticResource TertiaryColor}"
-                        MinimumTrackColor="{StaticResource SecondaryColor}" />
+                        MinimumTrackColor="{StaticResource SecondaryColor}"
+                        ValueChanged="ColorValueChangedS"/>
 
                 <Frame CornerRadius="25"
                        HorizontalOptions="Center">

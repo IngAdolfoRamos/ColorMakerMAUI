@@ -61,7 +61,8 @@
                                      HeightRequest="25"
                                      Source="copy"
                                      VerticalOptions="Center"
-                                     WidthRequest="25" />
+                                     WidthRequest="25"
+                                     Clicked="CopyColorIB"/>
 
                     </HorizontalStackLayout>
 

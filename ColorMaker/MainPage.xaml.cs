@@ -1,10 +1,12 @@
 ﻿using System.Diagnostics;
+using CommunityToolkit.Maui.Alerts;
 
 namespace ColorMaker;
 
 public partial class MainPage : ContentPage
 {
 	bool isRandom = false;
+	string hexValue; 
 
 	public MainPage()
 	{
@@ -30,7 +32,8 @@ public partial class MainPage : ContentPage
 		Debug.WriteLine(color.ToString());
 		RandomColorB.BackgroundColor = color;
 		Container.BackgroundColor = color;
-		HexL.Text = color.ToHex();
+		hexValue = color.ToHex();
+		HexL.Text = hexValue;
     }
 
 	private void GenerateRandomColorB(object sender, EventArgs e)
@@ -51,6 +54,16 @@ public partial class MainPage : ContentPage
 		BlueSlider.Value = color.Blue;
 
 		isRandom = false;
+    }
+
+	private async void CopyColorIB(object sender, EventArgs e)
+    {
+		await Clipboard.SetTextAsync(hexValue);
+
+		var toast = Toast.Make("Color copiado !",
+			CommunityToolkit.Maui.Core.ToastDuration.Short, 12);
+
+		await toast.Show();
     }
 }
 
